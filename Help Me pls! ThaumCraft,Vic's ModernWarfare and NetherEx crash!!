@@ -1,0 +1,217 @@
+Help Me pls! ThaumCraft,Vic's ModernWarfare and NetherEx crash!! there's the crash log
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  wings (wings-1.1.6-1.12.2.jar)
+  ObfuscatePlugin (obfuscate-0.2.1-1.12.2.jar)
+  midnight (themidnight-0.3.5.jar)
+  TickCentral (TickCentral-2.4.jar)
+  FMLModule (mdxlib-3.0.0.25.jar)
+  MalisisCorePlugin (MalisisCore-1.12.2.jar)
+  CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  llibrary (llibrary-core-1.0.11-1.12.2.jar)
+  LucraftCoreCoreMod (LucraftCore-1.12.2-2.4.10.jar)
+  TheBetweenlandsLoadingPlugin (TheBetweenlands-3.6.2-core.jar)
+  SurgeLoadingPlugin (Surge-1.12.2-2.0.77.jar)
+  LoadingPlugin (Chunk-Animator-Mod-1.12.jar)
+  weaponlib (mw_2.0-0.4.4.6_mc1.12.2.jar)
+Contact their authors BEFORE contacting forge
+
+// You should try our sister game, Minceraft!
+
+Time: 10/11/20 3:41 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Midnight (midnight)
+Caused by: java.lang.IllegalArgumentException: Failed to register dimension for id -23, One is already registered
+	at net.minecraftforge.common.DimensionManager.registerDimension(DimensionManager.java:134)
+	at com.mushroom.midnight.common.registry.ModDimensions.register(ModDimensions.java:12)
+	at com.mushroom.midnight.Midnight.preInit(Midnight.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:629)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:252)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:467)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1164589312 bytes (1110 MB) / 3146571776 bytes (3000 MB) up to 11797790720 bytes (11251 MB)
+	JVM Flags: 6 total; -Xmx11G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -Xmn128M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2854 Optifine OptiFine_1.12.2_HD_U_F5 81 mods loaded, 80 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                        | Version               | Source                                        | Signature                                |
+	|:----- |:------------------------- |:--------------------- |:--------------------------------------------- |:---------------------------------------- |
+	| LCH   | minecraft                 | 1.12.2                | minecraft.jar                                 | None                                     |
+	| LCH   | mcp                       | 9.42                  | minecraft.jar                                 | None                                     |
+	| LCH   | FML                       | 8.0.99.99             | forge-1.12.2-14.23.5.2854.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | forge                     | 14.23.5.2854          | forge-1.12.2-14.23.5.2854.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | obfuscate                 | 0.2.1                 | minecraft.jar                                 | None                                     |
+	| LCH   | tickcentral               | 2.4                   | TickCentral-2.4.jar                           | None                                     |
+	| LCH   | mdxlib                    | 3.0.0.25              | mdxlib-3.0.0.25.jar                           | None                                     |
+	| LCH   | avp                       | 6.0.0.62              | aliensvspredator-6.0.0.62.jar                 | None                                     |
+	| LCH   | aoa3                      | 3.3.5                 | AoA3-3.3.5.jar                                | 8bddeac148843f40e0b9f69201be2f4b3071700d |
+	| LCH   | baubles                   | 1.5.2                 | Baubles-1.12-1.5.2.jar                        | None                                     |
+	| LCH   | biomesoplenty             | 7.0.1.2444            | BiomesOPlenty-1.12.2-7.0.1.2444-universal.jar | None                                     |
+	| LCH   | thaumcraft                | 6.1.BETA26            | Thaumcraft-1.12.2-6.1.BETA26.jar              | None                                     |
+	| LCH   | botania                   | r1.10-363             | Botania+r1.10-363.jar                         | None                                     |
+	| LCH   | carryon                   | 1.12.3                | CarryOn+MC1.12.2+v1.12.3.jar                  | 55e88f24d04398481ae6f1ce76f65fd776f14227 |
+	| LCH   | cgm                       | 0.15.3                | cgm-0.15.3-mc1.12.2.jar                       | None                                     |
+	| LCH   | ctm                       | MC1.12.2-1.0.2.31     | CTM-MC1.12.2-1.0.2.31.jar                     | None                                     |
+	| LCH   | chisel                    | MC1.12.2-1.0.2.45     | Chisel-MC1.12.2-1.0.2.45.jar                  | None                                     |
+	| LCH   | chiselsandbits            | 14.33                 | chiselsandbits-14.33.jar                      | None                                     |
+	| LCH   | chunkpregenerator         | 2.1                   | Chunk+Pregenerator+V1.12-2.3.jar              | None                                     |
+	| LCH   | chunkanimator             | 1.2                   | Chunk-Animator-Mod-1.12.jar                   | None                                     |
+	| LCH   | clumps                    | 3.1.2                 | Clumps-3.1.2.jar                              | None                                     |
+	| LCH   | codechickenlib            | 3.2.2.353             | CodeChickenLib-1.12.2-3.2.2.353-universal.jar | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCH   | customnpcs                | 1.12                  | CustomNPCs_1.12.2-(01Oct19).jar               | None                                     |
+	| LCH   | darknesslib               | 1.1.0                 | DarknessLib-1.12.2-1.1.0.jar                  | 220f10d3a93b3ff5fbaa7434cc629d863d6751b9 |
+	| LCH   | dynamictrees              | 1.12.2-0.9.15         | DynamicTrees-1.12.2-0.9.15.jar                | None                                     |
+	| LCH   | ebwizardry                | 4.2.9                 | ElectroblobsWizardry-4.2.9-MC1.12.2.jar       | None                                     |
+	| LCH   | extra_spells              | 1.1.4                 | ExtraSpells-1.12.2-1.1.4.jar                  | None                                     |
+	| LCH   | forestry                  | 5.8.2.387             | forestry_1.12.2-5.8.2.387.jar                 | None                                     |
+	| LCH   | forgemultipartcbe         | 2.6.1.81              | ForgeMultipart-1.12.2-2.6.1.81-universal.jar  | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCH   | microblockcbe             | 2.6.1.81              | ForgeMultipart-1.12.2-2.6.1.81-universal.jar  | None                                     |
+	| LCH   | minecraftmultipartcbe     | 2.6.1.81              | ForgeMultipart-1.12.2-2.6.1.81-universal.jar  | None                                     |
+	| LCH   | llibrary                  | 1.7.19                | llibrary-1.7.19-1.12.2.jar                    | b9f30a813bee3b9dd5652c460310cfcd54f6b7ec |
+	| LCH   | fossil                    | 8.0.4                 | fossilsarcheology-8.0.4.jar                   | None                                     |
+	| LCH   | fpsreducer                | mc1.12.2-1.17         | FpsReducer-mc1.12.2-1.17.jar                  | None                                     |
+	| LCH   | cfm                       | 6.3.1                 | furniture-6.3.1-1.12.2.jar                    | None                                     |
+	| LCH   | grue                      | 1.8.0                 | Grue-1.12.2-1.8.0.jar                         | 220f10d3a93b3ff5fbaa7434cc629d863d6751b9 |
+	| LCH   | lucraftcore               | 1.12.2-2.4.10         | LucraftCore-1.12.2-2.4.10.jar                 | None                                     |
+	| LCH   | heroesexpansion           | 1.12.2-1.3.5          | HeroesExpansion-1.12.2-1.3.5.jar              | None                                     |
+	| LCH   | ichunutil                 | 7.0.1                 | iChunUtil-1.12.2-7.0.1.jar                    | None                                     |
+	| LCH   | journeymap                | 1.12.2-5.7.1          | journeymap-1.12.2-5.7.1.jar                   | None                                     |
+	| LCH   | laggoggles                | 1.12.2-5.8-132        | LagGoggles-1.12.2-5.8-132.jar                 | None                                     |
+	| LCH   | libraryex                 | 1.1.3                 | LibraryEx-1.12.2-1.1.3.jar                    | None                                     |
+	| LCH   | malisiscore               | 1.12.2-6.5.1-SNAPSHOT | MalisisCore-1.12.2.jar                        | None                                     |
+	| LCH   | malisisdoors              | 1.12.2-7.3.0          | malisisdoors-1.12.2-7.3.0.jar                 | None                                     |
+	| LCH   | metallurgy                | 0.3.3                 | Metallurgy-4-Reforged-0.3.3.jar               | None                                     |
+	| LCH   | mowziesmobs               | 1.5.7                 | mowziesmobs-1.5.7.jar                         | None                                     |
+	| LCH   | mrtjpcore                 | 2.1.4.43              | MrTJPCore-1.12.2-2.1.4.43-universal.jar       | None                                     |
+	| LCH   | mw                        | 0.4.4.6               | mw_2.0-0.4.4.6_mc1.12.2.jar                   | None                                     |
+	| LCH   | netherex                  | 2.1.8                 | NetherEx-1.12.2-2.1.8.jar                     | None                                     |
+	| LCH   | nifty                     | 1.21                  | NiftyBlocks-1.21.jar                          | None                                     |
+	| LCH   | projectred-core           | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-Base.jar          | None                                     |
+	| LCH   | projectred-compat         | 1.0                   | ProjectRed-1.12.2-4.9.4.120-compat.jar        | None                                     |
+	| LCH   | projectred-integration    | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-integration.jar   | None                                     |
+	| LCH   | projectred-transmission   | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-integration.jar   | None                                     |
+	| LCH   | projectred-fabrication    | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-fabrication.jar   | None                                     |
+	| LCH   | projectred-expansion      | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-mechanical.jar    | None                                     |
+	| LCH   | projectred-relocation     | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-mechanical.jar    | None                                     |
+	| LCH   | projectred-transportation | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-mechanical.jar    | None                                     |
+	| LCH   | projectred-exploration    | 4.9.4.120             | ProjectRed-1.12.2-4.9.4.120-world.jar         | None                                     |
+	| LCH   | xreliquary                | 1.12.2-1.3.4.796      | Reliquary-1.12.2-1.3.4.796.jar                | None                                     |
+	| LCH   | corerm                    | 1.3.1                 | RikMuldsCore_1.3.1.jar                        | None                                     |
+	| LCH   | roughtweaks               | 1.0                   | roughTweaks0.2.4-1.12.2.jar                   | None                                     |
+	| LCH   | rustic                    | 1.1.1                 | Rustic-Mod-1.12.2.jar                         | None                                     |
+	| LCH   | surge                     | 2.0.77                | Surge-1.12.2-2.0.77.jar                       | d476d1b22b218a10d845928d1665d45fce301b27 |
+	| LCH   | texfix                    | 4.0                   | TexFix+V-1.12-4.0.jar                         | None                                     |
+	| LCH   | herobrine                 | 0.4.4                 | The-Legend-of-Herobrine-Mod-1.12.2.jar        | None                                     |
+	| LCH   | camping                   | 2.4.3                 | TheCampingMod_2.4.3.jar                       | None                                     |
+	| LCH   | thutcore                  | 5.21.0                | thutcore-1.12.2-5.21.0.jar                    | None                                     |
+	| LCH   | thutcore_compat           | 1.0                   | thutcore-1.12.2-5.21.0.jar                    | None                                     |
+	| LCH   | thuttech                  | 6.1.6                 | thuttech-1.12.2-6.1.6.jar                     | None                                     |
+	| LCH   | tombstone                 | 3.7.4                 | tombstone-3.7.4-1.12.2.jar                    | None                                     |
+	| LCH   | travelersbackpack         | 1.0.33                | TravelersBackpack-1.12.2-1.0.33.jar           | None                                     |
+	| LCH   | twilightforest            | 3.11.1021             | twilightforest-1.12.2-3.11.1021-universal.jar | None                                     |
+	| LCH   | waystones                 | 4.0.72                | Waystones_1.12.2-4.0.72.jar                   | None                                     |
+	| LCH   | thejungle                 | 1.2006.1222           | Welcome+To+The+Jungle-1.2006.1222.jar         | None                                     |
+	| LCH   | wings                     | 1.1.6                 | wings-1.1.6-1.12.2.jar                        | None                                     |
+	| LCH   | mowzies_wings             | 1.0.0                 | wings-1.1.6-1.12.2.jar                        | None                                     |
+	| LCH   | bauble_wings              | 1.0.0                 | wings-1.1.6-1.12.2.jar                        | None                                     |
+	| LCH   | thebetweenlands           | 3.6.2                 | TheBetweenlands-3.6.2-universal.jar           | 38067d6878811efb38b6a045521cfd80b9b60b38 |
+	| LCE   | midnight                  | 0.3.5                 | themidnight-0.3.5.jar                         | None                                     |
+	| UD    | mobends_wings             | 1.0.0                 | wings-1.1.6-1.12.2.jar                        | None                                     |
+
+	Loaded coremods (and transformers): 
+wings (wings-1.1.6-1.12.2.jar)
+  me.paulf.wings.server.asm.WingsRuntimePatcher
+  me.paulf.wings.server.asm.mobends.WingsMoBendsRuntimePatcher
+ObfuscatePlugin (obfuscate-0.2.1-1.12.2.jar)
+  com.mrcrayfish.obfuscate.asm.ObfuscateTransformer
+midnight (themidnight-0.3.5.jar)
+  com.mushroom.midnight.core.transformer.MidnightClassTransformer
+TickCentral (TickCentral-2.4.jar)
+  com.github.terminatornl.laggoggles.tickcentral.EventBusTransformer
+  com.github.terminatornl.laggoggles.tickcentral.RenderManagerTransformer
+  com.github.terminatornl.tickcentral.asm.BlockTransformer
+  com.github.terminatornl.tickcentral.asm.ITickableTransformer
+  com.github.terminatornl.tickcentral.asm.EntityTransformer
+  com.github.terminatornl.tickcentral.asm.HubAPITransformer
+FMLModule (mdxlib-3.0.0.25.jar)
+  com.asx.mdx.AccessTransformer
+MalisisCorePlugin (MalisisCore-1.12.2.jar)
+  
+CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+llibrary (llibrary-core-1.0.11-1.12.2.jar)
+  net.ilexiconn.llibrary.server.core.plugin.LLibraryTransformer
+  net.ilexiconn.llibrary.server.core.patcher.LLibraryRuntimePatcher
+LucraftCoreCoreMod (LucraftCore-1.12.2-2.4.10.jar)
+  lucraft.mods.lucraftcore.core.LCTransformer
+TheBetweenlandsLoadingPlugin (TheBetweenlands-3.6.2-core.jar)
+  thebetweenlands.core.TheBetweenlandsClassTransformer
+SurgeLoadingPlugin (Surge-1.12.2-2.0.77.jar)
+  
+LoadingPlugin (Chunk-Animator-Mod-1.12.jar)
+  lumien.chunkanimator.asm.ClassTransformer
+weaponlib (mw_2.0-0.4.4.6_mc1.12.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.87' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+	OptiFine Version: OptiFine_1.12.2_HD_U_F5
+	OptiFine Build: 20191204-141934
+	Render Distance Chunks: 9
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 441.87
+	OpenGlRenderer: GeForce GTX 1050 Ti/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 6
